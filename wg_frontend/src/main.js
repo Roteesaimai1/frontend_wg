@@ -19,9 +19,10 @@ import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import { faGears } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import { faMoneyBillTransfer } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faTwitter, faHouse)
+library.add(faUserSecret, faTwitter, faHouse, faPlus, faWrench, faGears, faUser, faRightToBracket, faMoneyBillTransfer)
 
 const app = createApp(App)
 
