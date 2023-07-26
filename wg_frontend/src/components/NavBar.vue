@@ -1,13 +1,11 @@
 <template>
     <div class="sticky top-0">
         <!-- Logo -->
-        <div class="max-lg:grid max-lg:justify-items-center ">
-            
+        <div class="max-lg:grid max-lg:justify-items-center ">          
             <button class="mb-5">
                 <span>HR WG</span>                      
             </button>
-        </div>
-          
+        </div>         
         <!-- User & Role -->
         <hr> 
         <div class="mt-3 mb-3 max-lg:hidden">
