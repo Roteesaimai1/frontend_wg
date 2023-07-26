@@ -25,7 +25,7 @@
                <span class="">{{ 60 }}</span>
             </td>
             <td>
-               <span class=""><button><font-awesome-icon class="pr-3" icon="fa-solid fa-circle-info"  /></button></span>
+               <span class=""><button><font-awesome-icon class="pr-3 text-yellow-300" icon="fa-solid fa-circle-info"  /></button></span>
             </td>
           </tr>
         </tbody>

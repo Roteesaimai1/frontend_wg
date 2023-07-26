@@ -3,7 +3,7 @@
         <!-- Logo -->
         <div class="max-lg:grid max-lg:justify-items-center ">          
             <button class="mb-5">
-                <span>HR WG</span>                      
+                <span class="brightness-125 antialiased animate-pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-700 via-violet-500 to-red-700  text-5xl">HRWG</span>                      
             </button>
         </div>         
         <!-- User & Role -->
