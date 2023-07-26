@@ -1,9 +1,9 @@
 <template>
-  <div class="grid grid-rows-6 grid-cols-6 grid-flow-col gap-4 min-h-screen min-w-full">
+  <div class="grid grid-rows-6 grid-cols-6 grid-flow-col gap-4 min-h-screen ">
     <!-- Sidebar -->
-    <div class="row-span-6 text-red-50 h-full bg-zinc-900 p-10"> <Navbar/> </div>
+    <div class="row-span-6 text-red-50 h-full bg-zinc-900 p-10  "> <Navbar/> </div>
     <!-- header -->
-    <div class="max-lg:hidden  col-span-5  text-red-50 h-full pl-10 pt-3 pb-2">Header</div> 
+    <div class="max-lg:hidden  col-span-5 text-5xl text-red-50 h-full pl-10 pt-3 pb-2">HRWG</div> 
     <!-- Content -->
     <div class="row-span-5 col-span-5  text-red-50 pl-10 "><router-view></router-view></div>
   </div>

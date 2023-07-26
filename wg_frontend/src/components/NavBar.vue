@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="sticky top-0">
         <!-- Logo -->
         <div class="max-lg:grid max-lg:justify-items-center ">
+            
             <button class="mb-5">
                 <span>HR WG</span>                      
             </button>
