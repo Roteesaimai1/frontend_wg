@@ -16,7 +16,7 @@
             <tbody>
             <tr class="" v-for="item in foodstamp" :key="item.id">
                 <td>{{ item.date_only }}</td>
-                <td>{{ item.title }}</td>
+                <td>{{ item.name }} - <span class="text-sky-500">{{ item.title }}</span></td>
                 <td>{{ item.status }}</td>
                 <td>{{ item.money }}</td>
             </tr>

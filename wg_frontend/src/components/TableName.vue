@@ -19,10 +19,10 @@
               <span class="">{{ items.title }}</span>
             </td>
             <td>
-               <span class="">1</span>
+               <span class="">{{ items.total_days }}</span>
             </td>
             <td>
-               <span class="">{{ 60 }}</span>
+               <span class="">{{ items.total_amount }}</span>
             </td>
             <td>
                <span class=""><button><font-awesome-icon class="pr-3 text-yellow-300" icon="fa-solid fa-circle-info"  /></button></span>
@@ -40,7 +40,8 @@ import axios from "axios";
     
     data() {
         return {
-            employeelist: [],
+            employeelist: [],           
+            
         }
     },
     methods: {
@@ -52,10 +53,13 @@ import axios from "axios";
         .catch((err) => {
             console.error("Failed to fetch API");
         })
-       } 
+       },       
+       
+       
     },
     mounted(){
-        this.getemployee();
+        this.getemployee();                      
+        
     }
     }
 

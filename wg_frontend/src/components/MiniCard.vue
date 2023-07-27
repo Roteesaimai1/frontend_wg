@@ -68,7 +68,7 @@ import axios from "axios";
     }, 
     methods: {
       getTodayDate() {
-        const today = new Date();
+        const today = new Date();       
         return today.toISOString().slice(0, 10);
       },
       
