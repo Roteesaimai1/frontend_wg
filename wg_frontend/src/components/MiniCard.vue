@@ -1,6 +1,9 @@
 <template>
     <div class="col-span-3 row-span-1  rounded-md shadow-lg shadow-zinc-950">
-      <span>27-7-2023</span>
+      <div class="text-xl text-zinc-950">
+        <input type="date" v-model="selectedDate" @change="fetchDataByDate(selectedDate)" />
+                             
+      </div>
       <div class="grid grid-flow-row-dense grid-cols-4 gap-2 grid-rows-1">
         <!-- ยอดรวมวันนี้ -->
         <div class="col-span-1 row-span-1 bg-green-500 h-40 p-5 shadow-lg shadow-green-950 rounded-md flexd text-center">
@@ -8,7 +11,7 @@
             <span class="font-bold text-2xl ">ยอดรวมวันนี้</span>
           </div>
           <hr>
-          <div class="mt-5 text-2xl" v-for="item in getdata.totalsum" :key="item.total_money">
+          <div class="mt-5 text-2xl" v-for="item in totalMoney" :key="item.total_money" >
              {{ item.total_money }} บาท
           </div>
         </div>
@@ -54,25 +57,36 @@ import axios from "axios";
     name: 'minicard', 
     data() {
       return {
-        getdata: [],
         
+        selectedDate: this.getTodayDate(),        
+        totalMoney: [],
+
       }
     },
-    methods: {
-      getdatafs() {
-        axios.get("http://localhost:8000/api/employee/fs")
-        .then((response) => {
-          this.getdata = response.data; 
-        })
-        .catch((err) => {
-          console.error("Failed to fetch API");
-        })
-      },     
-    },
     mounted() {
-      this.getdatafs();
-    }   
-    }
+      const nowDate = this.getTodayDate();
+      this.fetchDataByDate(nowDate);
+    }, 
+    methods: {
+      getTodayDate() {
+        const today = new Date();
+        return today.toISOString().slice(0, 10);
+      },
+      
+      async fetchDataByDate(selectedDate) {
+        try {
+          const response = await axios.get(`http://localhost:8000/api/minicard/${selectedDate}`);
+          this.totalMoney = response.data;
+        } catch (err) {
+          console.error("Failed to fetch API", err);
+        }
+      },
+
+      // ส่วนของ getTodayDate ที่ถูกแก้ไขให้เป็น async
+      
+      
+    },
+  }    
 </script>
 
 <style scoped>

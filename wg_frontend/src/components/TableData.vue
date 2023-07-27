@@ -1,5 +1,6 @@
 <template>
     <div>
+         
         <table class="table-fixed">
             <thead>
             <tr>
@@ -11,41 +12,38 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="" v-for="item in foodstamp.data" :key="item.id">
-                <td>{{ item.date_stamp }}</td>
+            <tr class="" v-for="item in foodstamp" :key="item.id">
+                <td>{{ item.id }}</td>
                 <td>{{ item.title }}</td>
-                <td>{{ item.status }}</td>
-                <td>{{ item.money }}</td>
+                <td>{{ item.nameid }}</td>
+                <td>{{ item.banktype }}</td>
             </tr>
             </tbody>
         </table>
+        
     </div>
 </template>
 
 <script>
 import axios from "axios";
     export default {
+        
     name: 'tabledata',    
     
     data() {
         return {
+            
             foodstamp: [],
         }
     },
     methods: {
-        getfoodstamp() {
-            axios.get("http://localhost:8000/api/employee/fs")
-            .then((response) => {
-                this.foodstamp = response.data;
-            })
-            .catch((err) => {
-                console.error("Failed to fetch API");
-            })
-        }
+       
+       
     },
     mounted() {
-        this.getfoodstamp()
-    }
+        /* this.getfoodstamp() */
+    },
+    
     }
 </script>
 

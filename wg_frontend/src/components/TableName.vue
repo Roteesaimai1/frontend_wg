@@ -11,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="items in employeelist.data" :key="items.id" >
+          <tr v-for="items in employeelist" :key="items.id" >
             <td>
               <span class="">{{ items.id }}</span>
             </td>
