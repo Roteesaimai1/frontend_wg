@@ -1,7 +1,7 @@
 <template>
     <div class="col-span-3 row-span-1  rounded-md shadow-lg shadow-zinc-950">
-      <div class="text-xl text-zinc-950">
-        <input type="date" v-model="selectedDate" @change="fetchDataByDate(selectedDate)" />
+      <div class="text-xl text-zinc-50 rounded-t-md">เลือกวันที่
+        <input type="date" class="bg-zinc-100 text-zinc-950 rounded-md hover:text-sky-500" v-model="selectedDate" @change="fetchDataByDate(selectedDate)" />
                              
       </div>
       <div class="grid grid-flow-row-dense grid-cols-4 gap-2 grid-rows-1">
@@ -11,19 +11,19 @@
             <span class="font-bold text-2xl ">ยอดรวมวันนี้</span>
           </div>
           <hr>
-          <div class="mt-5 text-2xl" v-for="item in totalMoney" :key="item.total_money" >
-             {{ item.total_money }} บาท
+          <div class="mt-5 text-2xl" v-for="item in totalMoney" :key="item.resultByDate" >
+             {{ item.total_date_money }}
           </div>
         </div>
         <!-- รับสูงสุด -->
         <div class="col-span-1 row-span-1 bg-red-500 h-40 p-5 shadow-lg shadow-red-950 rounded-md flexd text-center">
-          <div class="mb-2">
+          <div class="mb-2" >
             <span class="font-bold text-2xl ">รับสูงสุด</span>
           </div>
           <hr>
-          <div class="mt-5 text-2xl">
-            <span>แบงค์</span>
-            60 บาท
+          <div class="mt-5 text-2xl" v-for="item in totalMoney" :key="item.maxRuslts">
+           {{ item.max_money }} 
+            
           </div>
         </div>
         <!-- รับน้อยสุด -->
@@ -32,9 +32,9 @@
             <span class="font-bold text-2xl ">รับน้อยสุด</span>
           </div>
           <hr>
-          <div class="mt-5 text-2xl">
-            <span>เติ้ล</span>
-            60 บาท
+          <div class="mt-5 text-2xl" v-for="item in totalMoney" :key="item.minRuslts">
+           {{ item.min_money }} 
+            
           </div>
         </div>
         <!-- ยอดรวมทั้งเดือน -->
@@ -43,8 +43,8 @@
             <span class="font-bold text-2xl ">ยอดรวมทั้งเดือน</span>
           </div>
           <hr>
-          <div class="mt-5 text-2xl">           
-            180 บาท
+          <div class="mt-5 text-2xl" v-for="item in totalMoney" :key="item.totalMonth" >           
+            {{ item.total_money }}
           </div>
         </div>
       </div>    
@@ -56,8 +56,7 @@ import axios from "axios";
     export default {
     name: 'minicard', 
     data() {
-      return {
-        
+      return {       
         selectedDate: this.getTodayDate(),        
         totalMoney: [],
 
