@@ -41,6 +41,7 @@ import axios from "axios";
     methods: {
         getTodayDate() {
             const today = new Date();
+            today.setHours(today.getHours() + 7); 
             return today.toISOString().slice(0, 10);
         },
         

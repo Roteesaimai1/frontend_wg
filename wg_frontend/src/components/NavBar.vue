@@ -27,7 +27,7 @@
                     </router-link>
                 </li>
                 <li class="mb-14 hover:text-2xl hover:text-sky-500">
-                    <router-link to="/about">
+                    <router-link to="/adddata">
                         <font-awesome-icon class="pr-3" icon="fa-solid fa-circle-plus" size="xl" />
                         <span class="max-lg:hidden ml-3">ลงค่าอาหาร</span>                       
                     </router-link>

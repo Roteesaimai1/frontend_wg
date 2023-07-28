@@ -6,7 +6,7 @@
       </div>
       <div class="grid grid-flow-row-dense grid-cols-4 gap-2 grid-rows-1">
         <!-- ยอดรวมวันนี้ -->
-        <div class="col-span-1 row-span-1 bg-green-500 h-40 p-5 shadow-lg shadow-green-950 rounded-md flexd text-center">
+        <div class="col-span-1 row-span-1 bg-green-500  h-40 p-5 shadow-lg shadow-green-950 rounded-md flexd text-center">
           <div class="mb-2">
             <span class="font-bold text-2xl ">ยอดรวมวันนี้</span>
           </div>
@@ -68,7 +68,8 @@ import axios from "axios";
     }, 
     methods: {
       getTodayDate() {
-        const today = new Date();       
+        const today = new Date();
+        today.setHours(today.getHours() + 7);       
         return today.toISOString().slice(0, 10);
       },
       
