@@ -33,7 +33,7 @@
                     </router-link>
                 </li>
                 <li class="mb-14 hover:text-2xl hover:text-sky-500">
-                    <router-link to="#">
+                    <router-link to="/settingpay">
                         <font-awesome-icon class="pr-3" icon="fa-solid fa-money-bill-transfer" size="xl" />
                         <span class="max-lg:hidden ml-1">ตั้งค่าการจ่าย</span>  
                     </router-link>

@@ -1,13 +1,16 @@
 <template>
     <div>
+        <div class="text-xl text-zinc-50 bg-sky-500 rounded-t-md">
+            <span>สรุปประจำเดือน</span>                              
+        </div>
         <table class="table-fixed ">
         <thead>
           <tr >
-            <th class="bg-sky-500 w-1/4 h-14 rounded-tl-md"><span class="">ลำดับ</span></th>
+            <th class="bg-sky-500 w-1/4 h-14 "><span class="">ลำดับ</span></th>
             <th class="bg-sky-500 w-1/4 h-14"><span class="">ชื่อ</span></th>
             <th class="bg-sky-500 w-1/4 h-14"><span class="">วัน</span></th>           
             <th class="bg-sky-500 w-1/4 h-14"><span class="">ยอดรวม</span></th>
-            <th class="bg-sky-500 w-1/4 h-14 rounded-tr-md"><span class=""></span></th>
+            <th class="bg-sky-500 w-1/4 h-14 "><span class=""></span></th>
           </tr>
         </thead>
         <tbody>
