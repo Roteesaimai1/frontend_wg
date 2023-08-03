@@ -142,14 +142,14 @@ import axios from "axios";
         employeelist: [],       
         foodstamp: [],
         currentMonth: "",
-        selectMonth: "",
+        selectMonth: 8,
         totalMonth: [],
       }
     },
     mounted() {
       const nowDate = this.getTodayDate();
       this.fetchDataByDate(nowDate);     
-      
+      this.getemployee(this.selectMonth);
        
     }, 
     methods: {
