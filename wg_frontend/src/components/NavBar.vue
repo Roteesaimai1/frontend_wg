@@ -39,7 +39,7 @@
                     </router-link>
                 </li>
                 <li class="mb-14 hover:text-2xl hover:text-sky-500">
-                    <router-link to="#">
+                    <router-link to="/test">
                         <font-awesome-icon class="pr-3" icon="fa-solid fa-address-card" size="xl" />
                         <span class="max-lg:hidden ml-1.5">ตั้งค่าพนักงาน</span>  
                     </router-link>
