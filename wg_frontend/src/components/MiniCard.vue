@@ -101,7 +101,7 @@
       </table>
     </div>
       <div class="col-span-2 start-col-2 row-span-3 bg-zinc-900 rounded-md shadow-lg shadow-zinc-950 text-center">
-        <div class="text-xl text-zinc-50 bg-sky-500 rounded-t-md">
+        <div class="text-xl text-zinc-50 bg-sky-500 rounded-t-md h-12">
             <span>สรุปประจำวัน</span>                              
         </div>
         <table class="table-fixed">

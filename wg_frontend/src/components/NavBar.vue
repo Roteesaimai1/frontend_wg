@@ -28,11 +28,11 @@
                 </li>
                 <li class="mb-14 hover:text-2xl hover:text-sky-500">
                     <router-link to="/adddata">
-                        <font-awesome-icon class="pr-3" icon="fa-solid fa-circle-plus" size="xl" />
-                        <span class="max-lg:hidden ml-3">ลงค่าอาหาร</span>                       
+                        <font-awesome-icon class="pr-2" icon="fa-solid fa-money-bill-transfer" size="xl" />
+                        <span class="max-lg:hidden ml-3">เพิ่มค่าอาหาร</span>                       
                     </router-link>
                 </li>
-                <li class="mb-14 hover:text-2xl hover:text-sky-500">
+                <li class="mb-14 hover:text-2xl hover:text-sky-500 hidden">
                     <router-link to="/settingpay">
                         <font-awesome-icon class="pr-3" icon="fa-solid fa-money-bill-transfer" size="xl" />
                         <span class="max-lg:hidden ml-1">ตั้งค่าการจ่าย</span>  
@@ -40,13 +40,13 @@
                 </li>
                 <li class="mb-14 hover:text-2xl hover:text-sky-500">
                     <router-link to="/test">
-                        <font-awesome-icon class="pr-3" icon="fa-solid fa-address-card" size="xl" />
-                        <span class="max-lg:hidden ml-1.5">ตั้งค่าพนักงาน</span>  
+                        <font-awesome-icon class="pr-4" icon="fa-solid fa-address-card" size="xl" />
+                        <span class="max-lg:hidden ml-1.5">เพิ่มพนักงาน</span>  
                     </router-link>
                 </li>
                 <li class="mb-14 hover:text-2xl hover:text-sky-500">
                     <router-link to="#">
-                        <font-awesome-icon class="pr-3" icon="fa-solid fa-right-to-bracket" size="xl" />
+                        <font-awesome-icon class="pr-4" icon="fa-solid fa-right-to-bracket" size="xl" />
                         <span class="max-lg:hidden ml-2">ออกจากระบบ</span>  
                     </router-link>
                 </li>

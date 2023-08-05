@@ -11,8 +11,8 @@
               <option value="DAY">เช้า</option>
               <option value="NIGHT">ดึก</option>               
           </select>           
-          <input v-model="employee.days" placeholder="Day" type="number" class="bg-zinc-950 w-14 text-center m-2" required>
-          <input v-model="employee.money" type="number" placeholder="Price" class="bg-zinc-950 w-14 text-center rounded-md m-2" required>
+          <input v-model="employee.days" placeholder="Day" type="number" class="bg-zinc-950 w-14 text-center m-2 hidden" required>       
+          <input v-model="employee.money" type="number" placeholder="Price" class="bg-zinc-950 w-14 text-center rounded-md m-2 hidden" required>
           <input v-model="employee.date_stamp" type="date" placeholder="Date" class="bg-zinc-900 m-2" required>                       
       </div>
       <div >
@@ -28,7 +28,7 @@ import axios from 'axios'
       data() {
           return {
               selectedItems: [
-                  { employee_id: null, status: null, days: null, money: null, date_stamp: null }
+                  { employee_id: null, status: null, days: 1, money: 60, date_stamp: null }
               ],
               employees: [],
           }
@@ -37,7 +37,7 @@ import axios from 'axios'
       addRow() {
           const lastEmployee = this.selectedItems[this.selectedItems.length - 1];
           if (lastEmployee.employee_id && lastEmployee.status && lastEmployee.days && lastEmployee.money && lastEmployee.date_stamp) {
-          this.selectedItems.push({ employee_id: null, status: null, days: null, money: null, date_stamp: null });
+          this.selectedItems.push({ employee_id: null, status: null, days: 1, money: 60, date_stamp: null });
           }
       },
       async getEmployee() {
